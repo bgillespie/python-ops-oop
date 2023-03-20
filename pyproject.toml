@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "python-ops-oop"
+version = "0.1.0"
+description = "A Python OOP tutorial"
+authors = ["Brian James Gillespie <1999841+bgillespie@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "python_tutorial_1"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+pyzmq = "^25.0.0"
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
