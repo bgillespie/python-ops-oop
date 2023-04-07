@@ -167,13 +167,13 @@ class TutorRouterV1(TutorRouter):
 class TutorRouterV2(TutorRouter):
 
     def _health_indicator(self, health: bool):
-        return {False: "down", True: "up"}[health]
+        return {False: "warn", True: "ok"}[health]
 
     def _login_path(self):
-        return "authenticate"
+        return "authenticate/admin"
 
     def _login_headers(self):
-        return {"token": "token123456"}
+        return {"token": "Password123"}
 
     def _check_auth(self, headers):
         return headers.get("Authentication") == f"TOKEN {self._auth_token}"
